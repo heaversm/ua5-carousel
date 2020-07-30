@@ -4,18 +4,16 @@
   display: flex;
   align-items: center;
   flex-direction: column;
-  background-image: url('../../assets/star.svg');
-  background-repeat: no-repeat;
-  background-size: auto 80%;
-  background-position: right center;
   padding: 96px 0;
+  position: relative;
 }
 .section_title {
-  font-size: 21px;
   text-transform: uppercase;
+  @include fluid-type($min_width, $max_width, 12px, $fs-section-title);
 }
 .slider {
   width: percentage(1160/1500);
+  max-width: $max_width;
 }
 .slide {
   text-align: center;
@@ -23,18 +21,18 @@
   overflow: hidden;
 }
 .message {
-  font-size: $fs-message;
+  @include fluid-type($min_width, $max_width, $min_font, $max_font);
   font-weight: $fw-normal;
   line-height: 1.111em;
   &:after {
     content: '\2014';
     display: block;
-    font-size: $fs-message;
+    @include fluid-type($min_width, $max_width, $min_font, $max_font);
     margin-top: 24px;
   }
 }
 .attribution {
-  font-size: 56px;
+  @include fluid-type($min_width, $max_width, $min_font, $fs-attribution);
   font-weight: $fw-normal;
   line-height: 1.14em;
 }
@@ -44,7 +42,31 @@
   color: $color-viewall-text;
   border: 0;
   font-family: $ff-body;
-  font-size: 18px;
+  @include fluid-type($min_width, $max_width, 12px, $fs-viewall);
   padding: 16px 40px;
   margin-top: 80px;
+  @include small-only {
+    padding: 8px 20px;
+  }
+}
+
+.star {
+  height: 80%;
+  max-height: 860px;
+  width: auto;
+  position: absolute;
+  right: 0;
+  top: 40px;
+  z-index: -1;
+  &--left {
+    transform: scale(-1, 1);
+    right: auto;
+    left: 0;
+  }
+}
+
+.dots {
+  li button:before {
+    @include fluid-type($min_width, $max_width, 16px, $slick-dot-size);
+  }
 }

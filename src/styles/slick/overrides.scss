@@ -1,7 +1,9 @@
 .slick-prev,
 .slick-next {
   width: $slick-arrow-width;
+  min-width: $slick-arrow-min-width;
   height: $slick-arrow-height;
+  min-height: $slick-arrow-min-height;
   top: $slick-arrow-top;
   &:before {
     content: '';
@@ -15,11 +17,18 @@
 }
 
 .slick-prev {
-  transform: translate(calc(-100% - 60px), -50%);
+  //transform: translate(calc(-100% - #{$slick-arrow-padding}), -50%);
+  left: 0;
+  right: auto;
+
+  transform: translate(-$slick-arrow-width);
 }
 
 .slick-next {
-  transform: translate(calc(100% + 60px), -50%);
+  //transform: translate(calc(100% + #{$slick-arrow-padding}), -50%);
+  right: 0;
+  left: auto;
+  transform: translate($slick-arrow-width);
   &:before {
     transform: rotate(180deg);
   }
