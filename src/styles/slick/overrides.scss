@@ -17,18 +17,15 @@
 }
 
 .slick-prev {
-  //transform: translate(calc(-100% - #{$slick-arrow-padding}), -50%);
+  transform: translate(calc(-100% - #{$slick-arrow-padding}), -50%);
   left: 0;
   right: auto;
-
-  transform: translate(-$slick-arrow-width);
 }
 
 .slick-next {
-  //transform: translate(calc(100% + #{$slick-arrow-padding}), -50%);
+  transform: translate(calc(100% + #{$slick-arrow-padding}), -50%);
   right: 0;
   left: auto;
-  transform: translate($slick-arrow-width);
   &:before {
     transform: rotate(180deg);
   }
@@ -36,8 +33,14 @@
 
 .slick-dots {
   position: static;
-  margin-top: $slick-dots-vspace;
+  margin-top: 0;
   li {
-    margin: 0 $slick-dot-spacing;
+    margin: 0;
+    @include medium {
+      margin: 0 5px;
+    }
+    @include large {
+      margin: 0 12px;
+    }
   }
 }

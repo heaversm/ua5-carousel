@@ -24,9 +24,11 @@ $bp-large: 1100px;
 
 //LAYOUT
 $design-width: 1500px;
-$carousel-slide-height: 70vh;
+$design-height: 900px; //approx
+$carousel-slide-height: 50vh;
 $min_width: 320px;
 $max_width: $design-width;
+$vspace-std: 4vh;
 
 //SLICK OVERRIDES
 $slick-font-family: inherit;
@@ -36,7 +38,7 @@ $slick-arrow-width: 4vw; //forms container for arrow background image
 $slick-arrow-height: #{$slick-arrow-width * (24/56)}; //original design aspect ratio
 $slick-arrow-min-width: 24px;
 $slick-arrow-min-height: #{$slick-arrow-min-width * (24/56)};
-$slick-arrow-padding: 4vw; //horizontal space between arrow and slide
+$slick-arrow-padding: 1vw; //horizontal space between arrow and slide
 $slick-dot-size: 46px;
 $slick-dot-spacing: 12px; //margin on either side of each dot
 $slick-dots-vspace: 4vw; //vertical space from slide

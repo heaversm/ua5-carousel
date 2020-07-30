@@ -17,24 +17,26 @@
 }
 .slide {
   text-align: center;
-  //max-height: $carousel-slide-height;
   overflow: hidden;
 }
 .message {
   @include fluid-type($min_width, $max_width, $min_font, $max_font);
   font-weight: $fw-normal;
   line-height: 1.111em;
+  margin-bottom: $vspace-std;
   &:after {
     content: '\2014';
     display: block;
     @include fluid-type($min_width, $max_width, $min_font, $max_font);
-    margin-top: 24px;
+    margin-top: 0;
   }
 }
 .attribution {
   @include fluid-type($min_width, $max_width, $min_font, $fs-attribution);
   font-weight: $fw-normal;
   line-height: 1.14em;
+  margin-bottom: $vspace-std;
+  margin-top: $vspace-std;
 }
 
 .view_all {
@@ -43,10 +45,10 @@
   border: 0;
   font-family: $ff-body;
   @include fluid-type($min_width, $max_width, 12px, $fs-viewall);
-  padding: 16px 40px;
-  margin-top: 80px;
-  @include small-only {
-    padding: 8px 20px;
+  padding: 8px 20px;
+  margin-top: $vspace-std;
+  @include medium {
+    padding: 16px 40px;
   }
 }
 
@@ -67,6 +69,10 @@
 
 .dots {
   li button:before {
-    @include fluid-type($min_width, $max_width, 16px, $slick-dot-size);
+    //@include fluid-type($min_width, $max_width, 16px, $slick-dot-size);
+    font-size: 36px;
+    @include large {
+      font-size: 46px;
+    }
   }
 }
