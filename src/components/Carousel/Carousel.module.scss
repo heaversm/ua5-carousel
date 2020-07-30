@@ -1,0 +1,50 @@
+@import '../../styles/app.scss';
+.container {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-image: url('../../assets/star.svg');
+  background-repeat: no-repeat;
+  background-size: auto 80%;
+  background-position: right center;
+  padding: 96px 0;
+}
+.section_title {
+  font-size: 21px;
+  text-transform: uppercase;
+}
+.slider {
+  width: percentage(1160/1500);
+}
+.slide {
+  text-align: center;
+  //max-height: $carousel-slide-height;
+  overflow: hidden;
+}
+.message {
+  font-size: $fs-message;
+  font-weight: $fw-normal;
+  line-height: 1.111em;
+  &:after {
+    content: '\2014';
+    display: block;
+    font-size: $fs-message;
+    margin-top: 24px;
+  }
+}
+.attribution {
+  font-size: 56px;
+  font-weight: $fw-normal;
+  line-height: 1.14em;
+}
+
+.view_all {
+  background-color: $color-viewall-bg;
+  color: $color-viewall-text;
+  border: 0;
+  font-family: $ff-body;
+  font-size: 18px;
+  padding: 16px 40px;
+  margin-top: 80px;
+}

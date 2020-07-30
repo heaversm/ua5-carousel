@@ -1,0 +1,17 @@
+@import 'variables';
+@import 'mixins';
+@import 'slick/slick';
+@import 'slick/slick-theme';
+@import 'slick/overrides';
+
+html {
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  font-family: $ff-body;
+  color: $color-body;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

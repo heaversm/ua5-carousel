@@ -1,0 +1,33 @@
+//COLORS
+$color-black: #000;
+$color-white: #fff;
+$color-yellow--primary: #f2d43a;
+$color-body: $color-black;
+$color-viewall-bg: $color-black;
+$color-viewall-text: $color-white;
+
+//TYPOGRAPHY
+$ff-body: Times New Roman, serif;
+$fw-bold: bold;
+$fw-normal: normal;
+$fs-message: 72px;
+
+//BREAKPOINTS
+$bp-small: 0;
+$bp-medium: 576px;
+$bp-large: 1100px;
+
+//LAYOUT
+$design-width: 1500px;
+$carousel-slide-height: 70vh;
+
+//SLICK OVERRIDES
+$slick-font-family: inherit;
+$slick-arrow-color: black;
+$slick-arrow-top: 27%;
+$slick-arrow-width: 56px; //forms container for arrow background image
+$slick-arrow-height: 24px;
+$slick-arrow-padding: 60px; //horizontal space between arrow and slide
+$slick-dot-size: 16px;
+$slick-dot-spacing: 12px; //margin on either side of each dot
+$slick-dots-vspace: 64px; //vertical space from slide

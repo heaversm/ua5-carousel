@@ -1,0 +1,34 @@
+.slick-prev,
+.slick-next {
+  width: $slick-arrow-width;
+  height: $slick-arrow-height;
+  top: $slick-arrow-top;
+  &:before {
+    content: '';
+    background-image: url('../../assets/arrow.svg');
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+
+.slick-prev {
+  transform: translate(calc(-100% - 60px), -50%);
+}
+
+.slick-next {
+  transform: translate(calc(100% + 60px), -50%);
+  &:before {
+    transform: rotate(180deg);
+  }
+}
+
+.slick-dots {
+  position: static;
+  margin-top: $slick-dots-vspace;
+  li {
+    margin: 0 $slick-dot-spacing;
+  }
+}
