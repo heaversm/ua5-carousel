@@ -99,7 +99,6 @@
 
 .dots {
   li button:before {
-    //@include fluid-type($min_width, $max_width, 16px, $slick-dot-size);
     font-size: 36px;
     @include large {
       font-size: 46px;

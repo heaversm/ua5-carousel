@@ -26,7 +26,7 @@ const Carousel = ({starLeft,messagesData, messageColor, buttonColor, showArrows,
     autoplaySpeed: autoplaySpeed,
     speed: animSpeed
   };
-//cx('foo', ['bar'], { baz: true });
+  
   return (
     <div className={cx(cstyles.container,{fx: fx, initialized: isInitialized})}>
       <img 

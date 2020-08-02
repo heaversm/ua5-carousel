@@ -1,3 +1,41 @@
+# CAROUSEL
+
+Implements a carousel component in react.
+
+## Up and Running
+
+- `yarn`
+- `yarn start`
+- Open your browser to [localhost:3000](http://localhost:3000)
+
+## Relevant Files
+
+- `App.js` - initializes the React App
+- `Carousel.js` - the JSX for the Carousel component
+- `app.scss` - imports all Sass files and base styles
+- `mixins.scss` & `variables.scss` provide most of the reusable functionality / configurable styling for the carousel
+- `carousel.module.scss` - the css module for the carousel component
+
+## Dependencies
+
+- [React Slick Carousel](https://react-slick.neostack.com/)
+- [classnames](https://github.com/JedWatson/classnames) - scopes & binds CSS (Sass) modules to the carousel component
+
+## Carousel Props
+
+starLeft: PropTypes.bool - moves the star to the left side of the carousel vs right
+showArrows: PropTypes.bool - show or hide next / prev arrows
+showDots: PropTypes.bool - show or hide navigation dots
+doFade: PropTypes.bool - fade carousel items instead of sliding them right and left
+doAutoplay: PropTypes.bool - auto advance carousel items
+animSpeed: PropTypes.number - how fast the fade / slide effect happens between each carousel slide
+autoplaySpeed: PropTypes.number - how long to wait between autoplaying each slide
+messageColor: PropTypes.string - pass any valid css color string to control the message text color
+buttonColor: PropTypes.string - pass any valid css color string to control the button bg color
+fx: PropTypes.bool - set to true to add some additional css transitions
+
+# CREATE REACT APP
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
