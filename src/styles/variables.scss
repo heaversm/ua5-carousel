@@ -12,10 +12,10 @@ $fw-bold: bold;
 $fw-normal: normal;
 $fs-message: 72px;
 $fs-attribution: 56px;
+$fs-attribution-min: 16px;
 $fs-section-title: 21px;
 $fs-viewall: 18px;
-$min_font: 20px;
-$max_font: $fs-message;
+$fs-message-min: 20px;
 
 //BREAKPOINTS
 $bp-small: 0;
@@ -27,7 +27,7 @@ $design-width: 1500px;
 $design-height: 900px; //approx
 $carousel-slide-height: 50vh;
 $min_width: 320px;
-$max_width: $design-width;
+$max_width: 1800px;
 $vspace-std: 4vh;
 
 //SLICK OVERRIDES

@@ -2,10 +2,29 @@
 .container {
   width: 100%;
   display: flex;
+  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  padding: 96px 0;
   position: relative;
+  margin-top: 10vh;
+  &:first-child {
+    margin-top: 0;
+  }
+  @include large {
+    margin-top: 30vh;
+  }
+}
+.container_inner {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-width: $max_width;
+  margin: 0 auto;
+  width: 100%;
+  padding: 5vh;
+  @include large {
+    padding: 10vh;
+  }
 }
 .section_title {
   text-transform: uppercase;
@@ -13,26 +32,32 @@
 }
 .slider {
   width: percentage(1160/1500);
-  max-width: $max_width;
+  max-width: #{$max_width * (1160px/1500px)};
 }
 .slide {
   text-align: center;
   overflow: hidden;
 }
 .message {
-  @include fluid-type($min_width, $max_width, $min_font, $max_font);
+  @include fluid-type($min_width, $max_width, $fs-message-min, $fs-message);
   font-weight: $fw-normal;
   line-height: 1.111em;
   margin-bottom: $vspace-std;
   &:after {
     content: '\2014';
     display: block;
-    @include fluid-type($min_width, $max_width, $min_font, $max_font);
+    @include fluid-type($min_width, $max_width, $fs-message-min, $fs-message);
     margin-top: 0;
+    color: $color-body;
   }
 }
 .attribution {
-  @include fluid-type($min_width, $max_width, $min_font, $fs-attribution);
+  @include fluid-type(
+    $min_width,
+    $max_width,
+    $fs-attribution-min,
+    $fs-attribution
+  );
   font-weight: $fw-normal;
   line-height: 1.14em;
   margin-bottom: $vspace-std;
@@ -58,10 +83,11 @@
   width: auto;
   position: absolute;
   right: 0;
-  top: 40px;
+  top: 50%;
+  transform: translateY(-50%);
   z-index: -1;
   &--left {
-    transform: scale(-1, 1);
+    transform: translateY(-50%) scale(-1, 1);
     right: auto;
     left: 0;
   }
