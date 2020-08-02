@@ -30,6 +30,11 @@ $min_width: 320px;
 $max_width: 1800px;
 $vspace-std: 4vh;
 
+//FX
+$anim-time--std: 300ms;
+$arrowHoverX: 5px;
+$ease-in-out-back: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+
 //SLICK OVERRIDES
 $slick-font-family: inherit;
 $slick-arrow-color: black;

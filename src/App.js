@@ -9,12 +9,14 @@ function App() {
       <main>
         <Carousel 
           messagesData={messageData[0]}
+          fx
         />
         <Carousel 
           starLeft
           messagesData={messageData[1]}
           messageColor='#0E4EF3'
           buttonColor='#0E4EF3'
+          starColor='#0E4EF3'
           doFade={true}
           doAutoplay={true}
           animSpeed={1000}

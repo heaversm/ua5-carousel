@@ -1,12 +1,18 @@
 import cstyles from './Carousel.module.scss';
 
-import React from 'react';
+import React, {useState, useEffect} from 'react';
 import PropTypes from 'prop-types';
 import Slider from 'react-slick';
 import cx from 'classnames';
 import star from '../../assets/star.svg';
 
-const Carousel = ({starLeft,messagesData, messageColor, buttonColor, showArrows, showDots, doFade, doAutoplay, animSpeed, autoplaySpeed}) => {
+const Carousel = ({starLeft,messagesData, messageColor, buttonColor, showArrows, showDots, doFade, doAutoplay, animSpeed, autoplaySpeed, fx}) => {
+
+  const [isInitialized,handleInitialize] = useState(false);
+
+  useEffect(()=>{
+    handleInitialize(true);
+  },[])
 
   const carouselSettings = {
     infinite: true,
@@ -20,11 +26,11 @@ const Carousel = ({starLeft,messagesData, messageColor, buttonColor, showArrows,
     autoplaySpeed: autoplaySpeed,
     speed: animSpeed
   };
-
+//cx('foo', ['bar'], { baz: true });
   return (
-    <div className={cstyles.container}>
+    <div className={cx(cstyles.container,{fx: fx, initialized: isInitialized})}>
       <img 
-        className={`${cx(cstyles.star)} ${starLeft && cx(cstyles['star--left'])}`}
+        className={`${cx(cstyles.star, 'star')} ${starLeft ? cx(cstyles['star--left']) : ''}`}
         src={star} alt="asterisk decorative graphic"
       />
       <div className={cstyles.container_inner}>
@@ -39,7 +45,7 @@ const Carousel = ({starLeft,messagesData, messageColor, buttonColor, showArrows,
             );
           })}
         </Slider>
-        <button className={cstyles.view_all} style={{backgroundColor: buttonColor && buttonColor}}>VIEW ALL</button>
+        <button className={`${cstyles.view_all} view_all`} style={{backgroundColor: buttonColor && buttonColor}}>VIEW ALL</button>
       </div>
     </div>
   );
@@ -53,6 +59,7 @@ Carousel.defaultProps = {
   doAutoplay: false,
   animSpeed: 500,
   autoplaySpeed: 3000,
+  fx: false,
 };
 
 Carousel.propTypes = {
@@ -65,6 +72,7 @@ Carousel.propTypes = {
   autoplaySpeed: PropTypes.number,
   messageColor: PropTypes.string,
   buttonColor: PropTypes.string,
+  fx: PropTypes.bool,
   messagesData: PropTypes.shape({
     section_title: PropTypes.string,
     quotes: PropTypes.arrayOf(PropTypes.shape({
