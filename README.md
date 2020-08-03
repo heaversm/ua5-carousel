@@ -4,9 +4,17 @@ Implements a carousel component in react.
 
 ## Up and Running
 
+Local development:
+
 - `yarn`
 - `yarn start`
 - Open your browser to [localhost:3000](http://localhost:3000)
+
+To run the build version:
+
+- `yarn build`
+- `npx serve -s build`
+- Open your browser to [localhost:5000](http://localhost:5000)
 
 ## Relevant Files
 

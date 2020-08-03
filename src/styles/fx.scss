@@ -19,9 +19,9 @@
     }
   }
   .view_all {
-    transition: transform $anim-time--std $ease-in-out-back;
+    transition: opacity $anim-time--std linear;
     &:hover {
-      transform: scale(1.05);
+      opacity: 0.8;
     }
   }
   .star {

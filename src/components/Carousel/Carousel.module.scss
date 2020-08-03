@@ -69,15 +69,13 @@
   color: $color-viewall-text;
   border: 0;
   font-family: $ff-body;
-
+  cursor: pointer;
   @include fluid-type($min_width, $max_width, 12px, $fs-viewall);
   padding: 8px 20px;
   margin-top: $vspace-std;
+
   @include medium {
     padding: 16px 40px;
-  }
-  &:hover {
-    transform: skew(-10deg);
   }
 }
 
