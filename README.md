@@ -2,6 +2,10 @@
 
 Implements a carousel component in react.
 
+## Preview URL
+
+A netlify build of the latest code in master can be found at [https://ua5-carousel.netlify.app/](https://ua5-carousel.netlify.app/)
+
 ## Up and Running
 
 Local development:
