@@ -5,13 +5,6 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  margin-top: 10vh;
-  &:first-child {
-    margin-top: 0;
-  }
-  @include large {
-    margin-top: 30vh;
-  }
 }
 .container_inner {
   display: flex;
@@ -69,15 +62,13 @@
   color: $color-viewall-text;
   border: 0;
   font-family: $ff-body;
-
+  cursor: pointer;
   @include fluid-type($min_width, $max_width, 12px, $fs-viewall);
   padding: 8px 20px;
   margin-top: $vspace-std;
+
   @include medium {
     padding: 16px 40px;
-  }
-  &:hover {
-    transform: skew(-10deg);
   }
 }
 
